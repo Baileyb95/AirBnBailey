@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, session, make_response
+from flask import Flask, request, jsonify, session, make_response, render_template
 from flask_cors import CORS, cross_origin
 from flask_session import Session
 from flask_restful import Resource
@@ -15,8 +15,9 @@ with app.app_context():
     db.create_all()
 
 @app.route("/")
-def home():
-    return "Welcome to the Home Page!"
+@app.route("<string:id>")
+def home(id=None):
+    return render_template("index.html")
 
 @app.route("/@me")
 def get_current_user():
