@@ -15,7 +15,7 @@ with app.app_context():
     db.create_all()
 
 @app.route("/")
-@app.route("<string:id>")
+@app.route("/<string:id>")
 def home(id=None):
     return render_template("index.html")
 
