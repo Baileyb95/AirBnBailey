@@ -14,6 +14,10 @@ cross_origin(supports_credentials=True)
 with app.app_context():
     db.create_all()
 
+@app.route("/")
+def home():
+    return "Welcome to the Home Page!"
+
 @app.route("/@me")
 def get_current_user():
     user_id = session.get("user_id")
