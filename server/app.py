@@ -107,7 +107,8 @@ def register_user():
     if user_exists:
         return jsonify({"error": "User already exists"}), 409
 
-    hashed_password = bcrypt.generate_password_hash(password)
+    hashed_password = bcrypt.generate_password_hash(password).decode('utf-8')
+
     new_user = User(email=email, password=hashed_password, first_name=first_name, last_name=last_name, phone_number=phone_number)
     db.session.add(new_user)
     db.session.commit()
@@ -126,12 +127,13 @@ def login_user():
         email = request.json["email"]
         password = request.json["password"]
 
+
         user = User.query.filter_by(email=email).first()
 
         if user is None:
             return jsonify({"error": "Unauthorized"}), 401
 
-        if not bcrypt.check_password_hash(user.password, password):
+        if not bcrypt.check_password_hash(user.password.encode('utf-8'), password):
             return jsonify({"error": "Unauthorized"}), 401
 
         return jsonify({
