@@ -40,7 +40,9 @@ Purpose lets users look at individual listing that they have previously have fav
 - Comments and reviews on homes
 - Geocoding
 
-#Video In Action
-<iframe src="https://player.vimeo.com/video/884557754?h=b8980df954&amp;badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" width="2646" height="1716" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="New Recording - 11/14/2023, 4:32:24 PM"></iframe>
+# Video In Action
+[VIDEO OF ME USING THE APP](https://vimeo.com/884557754/b8980df954)
+
+
 
 <img width="1330" alt="Screen Shot 2023-10-26 at 8 41 28 AM" src="https://github.com/Baileyb95/AirBnBailey/assets/108492331/90c37d79-6560-482a-a2bd-c5232c481a95">
