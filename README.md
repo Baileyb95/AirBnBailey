@@ -41,6 +41,6 @@ Purpose lets users look at individual listing that they have previously have fav
 - Geocoding
 
 #Video In Action
-<div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/884557754?h=b8980df954&amp;badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="New Recording - 11/14/2023, 4:32:24 PM"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<iframe src="https://player.vimeo.com/video/884557754?h=b8980df954&amp;badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" width="2646" height="1716" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="New Recording - 11/14/2023, 4:32:24 PM"></iframe>
 
 <img width="1330" alt="Screen Shot 2023-10-26 at 8 41 28 AM" src="https://github.com/Baileyb95/AirBnBailey/assets/108492331/90c37d79-6560-482a-a2bd-c5232c481a95">
