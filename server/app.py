@@ -6,6 +6,7 @@ from config import api, app, db
 from flask_bcrypt import Bcrypt
 from models import db, User, Listing, Booking, Review
 from datetime import datetime
+from flask_bcrypt import Bcrypt
 
 bcrypt = Bcrypt(app)
 Session(app)
