@@ -3,9 +3,11 @@ from flask_cors import CORS, cross_origin
 from flask_session import Session
 from flask_restful import Resource
 from config import api, app, db 
+from flask_bcrypt import Bcrypt
 from models import db, User, Listing, Booking, Review
 from datetime import datetime
 
+bcrypt = Bcrypt(app)
 Session(app)
 
 CORS(app, supports_credentials=True)
@@ -105,7 +107,7 @@ def register_user():
     if user_exists:
         return jsonify({"error": "User already exists"}), 409
 
-    hashed_password = app.generate_password_hash(password)
+    hashed_password = bcrypt.generate_password_hash(password)
     new_user = User(email=email, password=hashed_password, first_name=first_name, last_name=last_name, phone_number=phone_number)
     db.session.add(new_user)
     db.session.commit()
@@ -129,7 +131,7 @@ def login_user():
         if user is None:
             return jsonify({"error": "Unauthorized"}), 401
 
-        if not app.check_password_hash(user.password, password):
+        if not bcrypt.check_password_hash(user.password, password):
             return jsonify({"error": "Unauthorized"}), 401
 
         return jsonify({
